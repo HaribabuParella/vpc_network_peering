@@ -11,8 +11,8 @@ pipeline{
   stage('Create subnets') {
        steps{
            sh 'sleep 40'
-           sh 'gcloud compute networks subnets create vpc-custom-subnets --project=hari-cloud-first-project --range=10.0.0.0/24 --network=vpc-custom  --region=us-central1'
-           sh 'gcloud compute networks subnets create vpc1-custom-subnets --project=hari-cloud-first-project --range=10.0.0.0/24 --network=vpc1-custom  --region=us-central1'
+           sh 'gcloud compute networks subnets create vpc-custom-subnets --project=hari-cloud-first-project --range=10.8.0.0/24 --network=vpc-custom  --region=us-central1'
+           sh 'gcloud compute networks subnets create vpc1-custom-subnets --project=hari-cloud-first-project --range=10.9.0.0/24 --network=vpc1-custom  --region=us-central1'
     }
   }
   stage('Create Firewall rules') {
